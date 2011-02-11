@@ -65,6 +65,7 @@ Partial Class frmCardTable
         Me.btnDealHand.TabIndex = 1
         Me.btnDealHand.Text = "DEAL"
         Me.btnDealHand.UseVisualStyleBackColor = False
+        Me.btnDealHand.Visible = False
         '
         'btnQuit
         '
