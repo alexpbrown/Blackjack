@@ -28,8 +28,8 @@ Public Class frmStatistics
         End Try
 
         'Assigns probabilities to labels.
-        lblExactly.Text = 100 * decPlaceHolder.ToString & "%"
-        lblAtMost.Text = 100 * (1 - decPlaceHolder).ToString & "%"
+        lblExactly.Text = (100 * decPlaceHolder).ToString & "%"
+        lblAtMost.Text = (100 * (1 - decPlaceHolder)).ToString & "%"
 
     End Sub
 
@@ -73,7 +73,7 @@ Public Class frmStatistics
         'Up/Down since those variables may be "reset" on the card table when money runs out.
         lstGeneralDealer.Items.Add("Current Cash..................." & vbTab & frmBlackJack_Main.intHouseBank.ToString)
         lstGeneralDealer.Items.Add("Up/Down........................" & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.DEALER).intAggWinnings _
-                                  - frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intAggWinnings.ToString)
+                                  - frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intAggWinnings).ToString()
         lstGeneralDealer.Items.Add("Aggregate Cash Losses.........." & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intAggWinnings.ToString)
         lstGeneralDealer.Items.Add("Aggregate Cash Winnings........" & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.DEALER).intAggWinnings.ToString)
         lstGeneralDealer.Items.Add("Hands Won......................" & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.DEALER).intWon.ToString)
@@ -82,7 +82,7 @@ Public Class frmStatistics
         'Player general data.
         lstGeneralPlayer.Items.Add("Current Cash..................." & vbTab & frmBlackJack_Main.intPlayerCash.ToString)
         lstGeneralPlayer.Items.Add("Up/Down........................" & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intAggWinnings _
-                                  - frmBlackJack_Main.Statistics(frmBlackJack_Main.DEALER).intAggWinnings.ToString)
+                                  - frmBlackJack_Main.Statistics(frmBlackJack_Main.DEALER).intAggWinnings).ToString()
         lstGeneralPlayer.Items.Add("Aggregate Cash Losses.........." & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.DEALER).intAggWinnings.ToString)
         lstGeneralPlayer.Items.Add("Aggregate Cash Winnings........" & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intAggWinnings.ToString)
         lstGeneralPlayer.Items.Add("Hands Won......................" & vbTab & frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intWon.ToString)
@@ -155,7 +155,7 @@ Public Class frmStatistics
         Dim x As Integer
 
         'Variable to hold probability success so far
-        Dim P As Decimal = frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intWon / frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intTotalHands
+        Dim P As Decimal = CDec(frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intWon / frmBlackJack_Main.Statistics(frmBlackJack_Main.PLAYER).intTotalHands)
         'Variable to hold probability failure so far
         Dim Q As Decimal = 1 - P
 
@@ -173,7 +173,7 @@ Public Class frmStatistics
         End If
 
         'Binomial Probability Distribution Algorithm. Calls factorial function.
-        decBinDist = decFactorial(n) / (decFactorial(x) * decFactorial(n - x)) * (P ^ x) * (Q ^ (n - x))
+        decBinDist = CDec(decFactorial(n) / (decFactorial(x) * decFactorial(n - x)) * (P ^ x) * (Q ^ (n - x)))
 
         Return decBinDist
     End Function

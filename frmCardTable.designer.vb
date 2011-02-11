@@ -23,32 +23,32 @@ Partial Class frmCardTable
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCardTable))
-        Me.btnDealHand = New System.Windows.Forms.Button
-        Me.btnQuit = New System.Windows.Forms.Button
-        Me.Label3 = New System.Windows.Forms.Label
-        Me.rtbPlayersHand = New System.Windows.Forms.RichTextBox
-        Me.btnHitMe = New System.Windows.Forms.Button
-        Me.btnStay = New System.Windows.Forms.Button
-        Me.lblOr = New System.Windows.Forms.Label
-        Me.rtbDealersHand = New System.Windows.Forms.RichTextBox
-        Me.Label5 = New System.Windows.Forms.Label
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox
-        Me.Label6 = New System.Windows.Forms.Label
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox
-        Me.Label7 = New System.Windows.Forms.Label
-        Me.txtPlayerScore = New System.Windows.Forms.TextBox
-        Me.txtDealerScore = New System.Windows.Forms.TextBox
-        Me.Label8 = New System.Windows.Forms.Label
-        Me.Label9 = New System.Windows.Forms.Label
-        Me.txtWinnings = New System.Windows.Forms.TextBox
-        Me.txtBank = New System.Windows.Forms.TextBox
-        Me.Label10 = New System.Windows.Forms.Label
-        Me.Label11 = New System.Windows.Forms.Label
-        Me.Label12 = New System.Windows.Forms.Label
-        Me.txtWager = New System.Windows.Forms.TextBox
-        Me.btnWager = New System.Windows.Forms.Button
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox
+        Me.btnDealHand = New System.Windows.Forms.Button()
+        Me.btnQuit = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.rtbPlayersHand = New System.Windows.Forms.RichTextBox()
+        Me.btnHitMe = New System.Windows.Forms.Button()
+        Me.btnStay = New System.Windows.Forms.Button()
+        Me.lblOr = New System.Windows.Forms.Label()
+        Me.rtbDealersHand = New System.Windows.Forms.RichTextBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtPlayerScore = New System.Windows.Forms.TextBox()
+        Me.txtDealerScore = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.txtWinnings = New System.Windows.Forms.TextBox()
+        Me.txtBank = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.txtWager = New System.Windows.Forms.TextBox()
+        Me.btnWager = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -56,7 +56,7 @@ Partial Class frmCardTable
         'btnDealHand
         '
         Me.btnDealHand.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnDealHand.Font = New System.Drawing.Font("Papyrus", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDealHand.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnDealHand.ForeColor = System.Drawing.Color.Black
         Me.btnDealHand.Location = New System.Drawing.Point(15, 52)
         Me.btnDealHand.Margin = New System.Windows.Forms.Padding(2)
@@ -65,12 +65,11 @@ Partial Class frmCardTable
         Me.btnDealHand.TabIndex = 1
         Me.btnDealHand.Text = "DEAL"
         Me.btnDealHand.UseVisualStyleBackColor = False
-        Me.btnDealHand.Visible = False
         '
         'btnQuit
         '
         Me.btnQuit.BackColor = System.Drawing.Color.RosyBrown
-        Me.btnQuit.Font = New System.Drawing.Font("Papyrus", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnQuit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnQuit.Location = New System.Drawing.Point(900, 545)
         Me.btnQuit.Margin = New System.Windows.Forms.Padding(2)
         Me.btnQuit.Name = "btnQuit"
@@ -83,12 +82,12 @@ Partial Class frmCardTable
         '
         Me.Label3.AutoSize = True
         Me.Label3.BackColor = System.Drawing.Color.Transparent
-        Me.Label3.Font = New System.Drawing.Font("Viner Hand ITC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.White
         Me.Label3.Location = New System.Drawing.Point(263, 156)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(139, 31)
+        Me.Label3.Size = New System.Drawing.Size(124, 24)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Player Hand"
         '
@@ -105,7 +104,7 @@ Partial Class frmCardTable
         'btnHitMe
         '
         Me.btnHitMe.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnHitMe.Font = New System.Drawing.Font("Papyrus", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHitMe.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnHitMe.ForeColor = System.Drawing.Color.Black
         Me.btnHitMe.Location = New System.Drawing.Point(277, 32)
         Me.btnHitMe.Margin = New System.Windows.Forms.Padding(2)
@@ -119,7 +118,7 @@ Partial Class frmCardTable
         'btnStay
         '
         Me.btnStay.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnStay.Font = New System.Drawing.Font("Papyrus", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnStay.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStay.ForeColor = System.Drawing.Color.Black
         Me.btnStay.Location = New System.Drawing.Point(408, 32)
         Me.btnStay.Margin = New System.Windows.Forms.Padding(2)
@@ -134,12 +133,12 @@ Partial Class frmCardTable
         '
         Me.lblOr.AutoSize = True
         Me.lblOr.BackColor = System.Drawing.Color.Transparent
-        Me.lblOr.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOr.ForeColor = System.Drawing.Color.Transparent
         Me.lblOr.Location = New System.Drawing.Point(372, 37)
         Me.lblOr.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblOr.Name = "lblOr"
-        Me.lblOr.Size = New System.Drawing.Size(27, 15)
+        Me.lblOr.Size = New System.Drawing.Size(22, 15)
         Me.lblOr.TabIndex = 8
         Me.lblOr.Text = "Or"
         Me.lblOr.Visible = False
@@ -158,12 +157,12 @@ Partial Class frmCardTable
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Viner Hand ITC", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.White
         Me.Label5.Location = New System.Drawing.Point(48, 156)
         Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(135, 31)
+        Me.Label5.Size = New System.Drawing.Size(127, 24)
         Me.Label5.TabIndex = 10
         Me.Label5.Text = "Dealer Hand"
         '
@@ -182,12 +181,12 @@ Partial Class frmCardTable
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.White
         Me.Label6.Location = New System.Drawing.Point(21, 489)
         Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(162, 15)
+        Me.Label6.Size = New System.Drawing.Size(131, 15)
         Me.Label6.TabIndex = 12
         Me.Label6.Text = "Current Card Index:"
         '
@@ -206,12 +205,12 @@ Partial Class frmCardTable
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
-        Me.Label7.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.White
         Me.Label7.Location = New System.Drawing.Point(187, 489)
         Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(181, 15)
+        Me.Label7.Size = New System.Drawing.Size(156, 15)
         Me.Label7.TabIndex = 14
         Me.Label7.Text = "Array Indexes To Swap:"
         '
@@ -239,7 +238,7 @@ Partial Class frmCardTable
         '
         Me.Label8.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label8.Font = New System.Drawing.Font("Perpetua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.Black
         Me.Label8.Location = New System.Drawing.Point(41, 24)
         Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
@@ -284,7 +283,7 @@ Partial Class frmCardTable
         '
         Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer))
         Me.Label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label10.Font = New System.Drawing.Font("Perpetua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.Black
         Me.Label10.Location = New System.Drawing.Point(156, 24)
         Me.Label10.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
@@ -311,11 +310,11 @@ Partial Class frmCardTable
         '
         Me.Label12.AutoSize = True
         Me.Label12.BackColor = System.Drawing.Color.Transparent
-        Me.Label12.Font = New System.Drawing.Font("Perpetua Titling MT", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.Transparent
         Me.Label12.Location = New System.Drawing.Point(14, 23)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(57, 15)
+        Me.Label12.Size = New System.Drawing.Size(48, 15)
         Me.Label12.TabIndex = 23
         Me.Label12.Text = "Wager"
         '
@@ -329,7 +328,7 @@ Partial Class frmCardTable
         'btnWager
         '
         Me.btnWager.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnWager.Font = New System.Drawing.Font("Papyrus", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnWager.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnWager.ForeColor = System.Drawing.Color.Black
         Me.btnWager.Location = New System.Drawing.Point(173, 18)
         Me.btnWager.Name = "btnWager"
@@ -349,7 +348,7 @@ Partial Class frmCardTable
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.txtBank)
         Me.GroupBox1.Controls.Add(Me.txtPlayerScore)
-        Me.GroupBox1.Font = New System.Drawing.Font("Perpetua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
         Me.GroupBox1.Location = New System.Drawing.Point(445, 107)
         Me.GroupBox1.Name = "GroupBox1"
@@ -368,7 +367,7 @@ Partial Class frmCardTable
         Me.GroupBox2.Controls.Add(Me.txtWager)
         Me.GroupBox2.Controls.Add(Me.btnStay)
         Me.GroupBox2.Controls.Add(Me.lblOr)
-        Me.GroupBox2.Font = New System.Drawing.Font("Perpetua", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
         Me.GroupBox2.Location = New System.Drawing.Point(445, 12)
         Me.GroupBox2.Name = "GroupBox2"
@@ -379,7 +378,7 @@ Partial Class frmCardTable
         '
         'frmCardTable
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 19.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
@@ -396,7 +395,7 @@ Partial Class frmCardTable
         Me.Controls.Add(Me.rtbPlayersHand)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.btnQuit)
-        Me.Font = New System.Drawing.Font("Papyrus", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5)

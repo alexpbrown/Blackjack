@@ -24,6 +24,14 @@
         Next
     End Sub
 
+    Public ReadOnly Property TakeCard() As Card
+        Get
+            Dim removedCard As Card = mDeck(0)
+            mDeck.RemoveAt(0)
+            Return removedCard
+        End Get
+    End Property
+
     Public ReadOnly Property DeckState() As String
         Get
             Dim d As String = ""
