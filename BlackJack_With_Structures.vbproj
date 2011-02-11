@@ -95,6 +95,8 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CardCompare.vb" />
+    <Compile Include="Deck.vb" />
     <Compile Include="frmBlackJack_Main.Designer.vb">
       <DependentUpon>frmBlackJack_Main.vb</DependentUpon>
     </Compile>
@@ -128,6 +130,7 @@
     <Compile Include="frmCardTable.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Card.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmBlackJack_Main.resx">
