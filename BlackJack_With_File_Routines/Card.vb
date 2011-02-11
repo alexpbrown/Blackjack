@@ -1,6 +1,6 @@
 ﻿Public Class Card
-    Dim Suits() As String = {"S", "D", "C", "H"}
-    Dim Faces() As String = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"}
+    Dim Suits() As String = {"Spades", "Diamonds", "Clubs", "Hearts"}
+    Dim Faces() As String = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"}
 
     Private mFace As String
     Private mSuit As String
@@ -42,7 +42,7 @@
 
     'Returns the card as a string (e.g. "S6" six of spades)
     Public Overrides Function ToString() As String
-        Return mSuit & mFace
+        Return mFace & " of " & mSuit
     End Function
 
     'Implement card jpegs as a sub here

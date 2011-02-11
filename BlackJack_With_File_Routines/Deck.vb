@@ -1,8 +1,8 @@
 ﻿Public Class Deck
     Dim r As New Random(Now.Millisecond)
     Dim mDeck As New List(Of Card)
-    Dim Suits() As String = {"S", "D", "C", "H"}
-    Dim Faces() As String = {"2", "3", "4", "5", "6", "7", "8", "9", "T", "J", "Q", "K", "A"}
+    Dim Suits() As String = {"Spades", "Diamonds", "Clubs", "Hearts"}
+    Dim Faces() As String = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"}
 
     'constructor that adds one of each card to the deck
     Public Sub New()
@@ -13,14 +13,16 @@
         Next
     End Sub
 
+    'Knuth Shuffle!
     Public Sub Shuffle()
         Dim card As Card
         Dim cardNum As Integer
-        For i As Integer = 0 To 52
-            cardNum = r.Next(0, 51) Mod mDeck.Count 'TEST THIS FOR RANDOMNESS
-            card = mDeck(cardNum)
-            mDeck.RemoveAt(cardNum)
-            mDeck.Add(card)
+        For i As Integer = mDeck.Count - 1 To 0 Step -1
+            cardNum = r.Next(i + 1)
+
+            card = mDeck(i)
+            mDeck(i) = mDeck(cardNum)
+            mDeck(cardNum) = card
         Next
     End Sub
 
