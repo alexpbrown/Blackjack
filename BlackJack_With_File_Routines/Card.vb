@@ -4,7 +4,7 @@
 
     Private mFace As String
     Private mSuit As String
-    Protected cValue As Integer
+    Protected fValue As Integer
     Protected sValue As Integer
 
     Public ReadOnly Property Suit() As String
@@ -19,9 +19,9 @@
         End Get
     End Property
 
-    Public ReadOnly Property CardValue() As Integer
+    Public ReadOnly Property FaceValue() As Integer
         Get
-            Return cValue
+            Return fValue
         End Get
     End Property
 
@@ -31,11 +31,23 @@
         End Get
     End Property
 
+    Public ReadOnly Property CardValue() As Integer
+        Get
+            If fValue = 12 Then
+                Return 11
+            ElseIf fValue > 7 Then
+                Return 10
+            Else
+                Return fValue + 2
+            End If
+        End Get
+    End Property
+
     'Constructor for the class, initializes values for the card
     Public Sub New(ByVal newSuit As String, ByVal newFaceVal As String)
         mFace = newFaceVal
         mSuit = newSuit
-        cValue = Array.IndexOf(Of String)(Faces, mFace)
+        fValue = Array.IndexOf(Of String)(Faces, mFace)
         sValue = Array.IndexOf(Of String)(Suits, mSuit)
     End Sub
 
