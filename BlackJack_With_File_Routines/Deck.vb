@@ -15,14 +15,14 @@
 
     'Knuth Shuffle!
     Public Sub Shuffle()
-        Dim card As Card
-        Dim cardNum As Integer
+        Dim tmpCard As Card
+        Dim randCard As Integer
         For i As Integer = mDeck.Count - 1 To 0 Step -1
-            cardNum = r.Next(i + 1)
+            randCard = r.Next(i + 1)
 
-            card = mDeck(i)
-            mDeck(i) = mDeck(cardNum)
-            mDeck(cardNum) = card
+            tmpCard = mDeck(i)
+            mDeck(i) = mDeck(randCard)
+            mDeck(randCard) = tmpCard
         Next
     End Sub
 
