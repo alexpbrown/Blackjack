@@ -2,7 +2,8 @@
 
     Private gamesWon As Integer     ' number of times the player has won
     Private gamesPlayed As Integer  ' number of games played
-    Private totalWinnings As Decimal    'total player winnings
+    Private totalWinnings As Decimal    ' total player winnings
+    Private playerCash As Decimal       ' player cash on hand
 
     Public Property Won() As Integer
         Get
@@ -28,6 +29,15 @@
         End Get
         Set(ByVal value As Decimal)
             totalWinnings = value
+        End Set
+    End Property
+
+    Public Property Cash() As Decimal
+        Get
+            Return playerCash
+        End Get
+        Set(ByVal value As Decimal)
+            playerCash = value
         End Set
     End Property
 
