@@ -1,29 +1,14 @@
 ﻿
 'This class controls the flow of the program- they can either play, go to statistics, or exit program.
 Public Class frmBlackJack_Main
+    Public user As New Player
+    Public dealer As New Player
 
-    'These are declared in main form so main can pass them to both subforms as needed.
-    Public intPlayerCash As Integer = 100      'declares and makes sure beginning cash for player is 100
-    Public intHouseBank As Integer = 500       'declares and makes sure beginning cash for dealer is 500
-
-    'Structure for statistics
-    Public Structure Stats
-        Dim intWon As Integer 'number of times player won
-        Dim intTotalHands As Integer 'total number of hands
-        Dim intAggWinnings As Integer 'holds total amount won
-        Dim intCard() As Integer 'holds the number of times the a card name comes up
-    End Structure
-
-    'Instance of my statistical structure
-    Public Statistics(1) As Stats
-
-    'The following constants act as metadata for reference of structure index
-    Public Const DEALER As Integer = 0
-    Public Const PLAYER As Integer = 1
 
     'Go to the card table.
     Private Sub lblPlay_frmMain_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles lblPlay_frmMain.Click
-
+        user.Cash = 100
+        dealer.Cash = 500
         'set main program into background
         Me.Visible = False
 
