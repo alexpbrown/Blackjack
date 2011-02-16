@@ -98,9 +98,7 @@
     <Compile Include="frmStatistics.Designer.vb">
       <DependentUpon>frmStatistics.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmStatistics.vb">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Include="frmStatistics.vb" />
     <Compile Include="Hand.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -124,6 +122,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Card.vb" />
+    <Compile Include="Player.vb" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="frmBlackJack_Main.resx">

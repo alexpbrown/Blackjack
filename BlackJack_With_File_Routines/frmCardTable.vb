@@ -68,16 +68,18 @@ Public Class frmCardTable
             playerHand.AddCard(myDeck.TakeCard)
             dealerHand.AddCard(myDeck.TakeCard)
 
+            'show the players cards in the text box
             rtbPlayersHand.AppendText(playerHand.Cards(i).ToString & vbCrLf)
 
         Next
 
+        'show only the dealer's first card
         rtbDealersHand.AppendText(dealerHand.Cards(0).ToString & vbCrLf)
 
         RichTextBox1.AppendText(myDeck.DeckState)
 
-        txtPlayerScore.Text = Score(playerHand).ToString
-        txtDealerScore.Text = Score(dealerHand).ToString
+        txtPlayerScore.Text = playerHand.Score.ToString
+        txtDealerScore.Text = dealerHand.Score.ToString
 
         btnDealHand.Visible = False
         btnHitMe.Visible = True
@@ -88,29 +90,6 @@ Public Class frmCardTable
         'Console.WriteLine("Hand [{0}]", dealerHand.Cards(0))
     End Sub
 
-    'calculates the score of the hand
-    Function Score(ByVal h As Hand) As Integer
-        Dim aggScore As Integer = 0
-        Dim numAces As Integer = 0
-        Dim cValue As Integer
-        For i As Integer = 0 To h.Length - 1
-            cValue = h.Cards(i).CardValue
-            If cValue = 11 Then
-                numAces += 1
-            End If
-            aggScore += cValue
-        Next
-
-        'while the score is over 21, subtract 10 for each ace present in the hand
-        For i As Integer = numAces To 1 Step -1
-            If aggScore > 21 Then
-                aggScore -= 10
-            End If
-        Next
-
-        Return aggScore
-    End Function
-
     Sub WagerReset()
         txtWager.Text = String.Empty
         wagerAmount = 0
@@ -119,7 +98,11 @@ Public Class frmCardTable
 
     Private Sub btnHitMe_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnHitMe.Click
         playerHand.AddCard(myDeck.TakeCard)
-        txtPlayerScore.Text = Score(playerHand).ToString
+        txtPlayerScore.Text = playerHand.Score.ToString
         rtbPlayersHand.AppendText(playerHand.Cards(playerHand.Length - 1).ToString & vbCrLf)
+    End Sub
+
+    Private Sub btnStay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStay.Click
+
     End Sub
 End Class
