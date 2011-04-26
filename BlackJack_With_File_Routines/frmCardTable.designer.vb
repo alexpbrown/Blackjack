@@ -27,7 +27,7 @@ Partial Class frmCardTable
         Me.btnQuit = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.rtbPlayersHand = New System.Windows.Forms.RichTextBox()
-        Me.btnHitMe = New System.Windows.Forms.Button()
+        Me.btnHitMe1 = New System.Windows.Forms.Button()
         Me.btnStay = New System.Windows.Forms.Button()
         Me.lblOr = New System.Windows.Forms.Label()
         Me.rtbDealersHand = New System.Windows.Forms.RichTextBox()
@@ -49,6 +49,9 @@ Partial Class frmCardTable
         Me.btnWager = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnSplit = New System.Windows.Forms.Button()
+        Me.btnDouble = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
@@ -102,26 +105,26 @@ Partial Class frmCardTable
         Me.rtbPlayersHand.TabIndex = 5
         Me.rtbPlayersHand.Text = ""
         '
-        'btnHitMe
+        'btnHitMe1
         '
-        Me.btnHitMe.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.btnHitMe.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnHitMe.ForeColor = System.Drawing.Color.Black
-        Me.btnHitMe.Location = New System.Drawing.Point(277, 32)
-        Me.btnHitMe.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnHitMe.Name = "btnHitMe"
-        Me.btnHitMe.Size = New System.Drawing.Size(83, 26)
-        Me.btnHitMe.TabIndex = 6
-        Me.btnHitMe.Text = "HIT ME"
-        Me.btnHitMe.UseVisualStyleBackColor = False
-        Me.btnHitMe.Visible = False
+        Me.btnHitMe1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnHitMe1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHitMe1.ForeColor = System.Drawing.Color.Black
+        Me.btnHitMe1.Location = New System.Drawing.Point(263, 21)
+        Me.btnHitMe1.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnHitMe1.Name = "btnHitMe1"
+        Me.btnHitMe1.Size = New System.Drawing.Size(83, 26)
+        Me.btnHitMe1.TabIndex = 6
+        Me.btnHitMe1.Text = "HIT ME"
+        Me.btnHitMe1.UseVisualStyleBackColor = False
+        Me.btnHitMe1.Visible = False
         '
         'btnStay
         '
         Me.btnStay.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
         Me.btnStay.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnStay.ForeColor = System.Drawing.Color.Black
-        Me.btnStay.Location = New System.Drawing.Point(408, 32)
+        Me.btnStay.Location = New System.Drawing.Point(394, 21)
         Me.btnStay.Margin = New System.Windows.Forms.Padding(2)
         Me.btnStay.Name = "btnStay"
         Me.btnStay.Size = New System.Drawing.Size(83, 26)
@@ -136,7 +139,7 @@ Partial Class frmCardTable
         Me.lblOr.BackColor = System.Drawing.Color.Transparent
         Me.lblOr.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOr.ForeColor = System.Drawing.Color.Transparent
-        Me.lblOr.Location = New System.Drawing.Point(372, 37)
+        Me.lblOr.Location = New System.Drawing.Point(358, 26)
         Me.lblOr.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.lblOr.Name = "lblOr"
         Me.lblOr.Size = New System.Drawing.Size(22, 15)
@@ -361,10 +364,13 @@ Partial Class frmCardTable
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.Color.Transparent
+        Me.GroupBox2.Controls.Add(Me.btnSplit)
+        Me.GroupBox2.Controls.Add(Me.btnDouble)
+        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.btnDealHand)
         Me.GroupBox2.Controls.Add(Me.btnWager)
-        Me.GroupBox2.Controls.Add(Me.btnHitMe)
+        Me.GroupBox2.Controls.Add(Me.btnHitMe1)
         Me.GroupBox2.Controls.Add(Me.txtWager)
         Me.GroupBox2.Controls.Add(Me.btnStay)
         Me.GroupBox2.Controls.Add(Me.lblOr)
@@ -376,6 +382,46 @@ Partial Class frmCardTable
         Me.GroupBox2.TabIndex = 0
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Game Controls"
+        '
+        'btnSplit
+        '
+        Me.btnSplit.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnSplit.Enabled = False
+        Me.btnSplit.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSplit.ForeColor = System.Drawing.Color.Black
+        Me.btnSplit.Location = New System.Drawing.Point(263, 52)
+        Me.btnSplit.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnSplit.Name = "btnSplit"
+        Me.btnSplit.Size = New System.Drawing.Size(83, 26)
+        Me.btnSplit.TabIndex = 29
+        Me.btnSplit.Text = "SPLIT"
+        Me.btnSplit.UseVisualStyleBackColor = False
+        '
+        'btnDouble
+        '
+        Me.btnDouble.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(128, Byte), Integer))
+        Me.btnDouble.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnDouble.ForeColor = System.Drawing.Color.Black
+        Me.btnDouble.Location = New System.Drawing.Point(394, 52)
+        Me.btnDouble.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnDouble.Name = "btnDouble"
+        Me.btnDouble.Size = New System.Drawing.Size(124, 26)
+        Me.btnDouble.TabIndex = 30
+        Me.btnDouble.Text = "DOUBLE DOWN"
+        Me.btnDouble.UseVisualStyleBackColor = False
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.Transparent
+        Me.Label1.Location = New System.Drawing.Point(358, 57)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(22, 15)
+        Me.Label1.TabIndex = 31
+        Me.Label1.Text = "Or"
         '
         'frmCardTable
         '
@@ -416,7 +462,7 @@ Partial Class frmCardTable
     Friend WithEvents btnQuit As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents rtbPlayersHand As System.Windows.Forms.RichTextBox
-    Friend WithEvents btnHitMe As System.Windows.Forms.Button
+    Friend WithEvents btnHitMe1 As System.Windows.Forms.Button
     Friend WithEvents btnStay As System.Windows.Forms.Button
     Friend WithEvents lblOr As System.Windows.Forms.Label
     Friend WithEvents rtbDealersHand As System.Windows.Forms.RichTextBox
@@ -438,5 +484,8 @@ Partial Class frmCardTable
     Friend WithEvents btnWager As System.Windows.Forms.Button
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents btnSplit As System.Windows.Forms.Button
+    Friend WithEvents btnDouble As System.Windows.Forms.Button
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class

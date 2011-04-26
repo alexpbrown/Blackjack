@@ -1,5 +1,6 @@
 ﻿Public Class Hand
     Protected mHand As List(Of Card)
+    Private fin As Boolean = False
 
     Public ReadOnly Property Length() As Integer
         Get
@@ -16,9 +17,39 @@
         mHand.Add(c)
     End Sub
 
-    Public Function Cards(ByRef index As Integer) As Card
-        Return mHand(index)
-    End Function
+    Public Sub RemoveCard(ByVal i As Integer)
+        mHand.RemoveAt(i)
+    End Sub
+
+    Public ReadOnly Property Cards(ByVal index As Integer) As Card
+        Get
+            Return mHand(index)
+        End Get
+    End Property
+
+    Public Property Finished() As Boolean
+        Get
+            Return fin
+        End Get
+        Set(ByVal value As Boolean)
+            fin = value
+        End Set
+    End Property
+
+    Public ReadOnly Property Blackjack() As Boolean
+        Get
+            If mHand.Count = 2 And Score() = 21 Then
+                fin = True
+                Return True
+            Else
+                Return False
+            End If
+        End Get
+    End Property
+
+    Public Sub Clear()
+        mHand.Clear()
+    End Sub
 
     'calculates the score of the hand
     Function Score() As Integer
@@ -39,10 +70,6 @@
                 aggScore -= 10
             End If
         Next
-
-        If aggScore > 21 Then
-            MessageBox.Show("Bust!")
-        End If
 
         Return aggScore
     End Function

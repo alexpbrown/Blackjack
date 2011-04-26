@@ -52,7 +52,7 @@
     End Sub
 
 
-    'Returns the card as a string (e.g. "S6" six of spades)
+    'Returns the card as a string (e.g. "6 of Spades" six of spades)
     Public Overrides Function ToString() As String
         Return mFace & " of " & mSuit
     End Function
