@@ -22,6 +22,7 @@ Partial Class frmCardTable
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmCardTable))
         Me.btnDealHand = New System.Windows.Forms.Button()
         Me.btnQuit = New System.Windows.Forms.Button()
@@ -52,8 +53,23 @@ Partial Class frmCardTable
         Me.btnSplit = New System.Windows.Forms.Button()
         Me.btnDouble = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnDealHand
@@ -423,6 +439,119 @@ Partial Class frmCardTable
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "Or"
         '
+        'ImageList1
+        '
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
+        Me.ImageList1.Images.SetKeyName(0, "c2.png")
+        Me.ImageList1.Images.SetKeyName(1, "c3.png")
+        Me.ImageList1.Images.SetKeyName(2, "c4.png")
+        Me.ImageList1.Images.SetKeyName(3, "c5.png")
+        Me.ImageList1.Images.SetKeyName(4, "c6.png")
+        Me.ImageList1.Images.SetKeyName(5, "c7.png")
+        Me.ImageList1.Images.SetKeyName(6, "c8.png")
+        Me.ImageList1.Images.SetKeyName(7, "c9.png")
+        Me.ImageList1.Images.SetKeyName(8, "c10.png")
+        Me.ImageList1.Images.SetKeyName(9, "cj.png")
+        Me.ImageList1.Images.SetKeyName(10, "cq.png")
+        Me.ImageList1.Images.SetKeyName(11, "ck.png")
+        Me.ImageList1.Images.SetKeyName(12, "c1.png")
+        Me.ImageList1.Images.SetKeyName(13, "d2.png")
+        Me.ImageList1.Images.SetKeyName(14, "d3.png")
+        Me.ImageList1.Images.SetKeyName(15, "d4.png")
+        Me.ImageList1.Images.SetKeyName(16, "d5.png")
+        Me.ImageList1.Images.SetKeyName(17, "d6.png")
+        Me.ImageList1.Images.SetKeyName(18, "d7.png")
+        Me.ImageList1.Images.SetKeyName(19, "d8.png")
+        Me.ImageList1.Images.SetKeyName(20, "d9.png")
+        Me.ImageList1.Images.SetKeyName(21, "d10.png")
+        Me.ImageList1.Images.SetKeyName(22, "dj.png")
+        Me.ImageList1.Images.SetKeyName(23, "dq.png")
+        Me.ImageList1.Images.SetKeyName(24, "dk.png")
+        Me.ImageList1.Images.SetKeyName(25, "d1.png")
+        Me.ImageList1.Images.SetKeyName(26, "h2.png")
+        Me.ImageList1.Images.SetKeyName(27, "h3.png")
+        Me.ImageList1.Images.SetKeyName(28, "h4.png")
+        Me.ImageList1.Images.SetKeyName(29, "h5.png")
+        Me.ImageList1.Images.SetKeyName(30, "h6.png")
+        Me.ImageList1.Images.SetKeyName(31, "h7.png")
+        Me.ImageList1.Images.SetKeyName(32, "h8.png")
+        Me.ImageList1.Images.SetKeyName(33, "h9.png")
+        Me.ImageList1.Images.SetKeyName(34, "h10.png")
+        Me.ImageList1.Images.SetKeyName(35, "hj.png")
+        Me.ImageList1.Images.SetKeyName(36, "hq.png")
+        Me.ImageList1.Images.SetKeyName(37, "hk.png")
+        Me.ImageList1.Images.SetKeyName(38, "h1.png")
+        Me.ImageList1.Images.SetKeyName(39, "s2.png")
+        Me.ImageList1.Images.SetKeyName(40, "s3.png")
+        Me.ImageList1.Images.SetKeyName(41, "s4.png")
+        Me.ImageList1.Images.SetKeyName(42, "s5.png")
+        Me.ImageList1.Images.SetKeyName(43, "s6.png")
+        Me.ImageList1.Images.SetKeyName(44, "s7.png")
+        Me.ImageList1.Images.SetKeyName(45, "s8.png")
+        Me.ImageList1.Images.SetKeyName(46, "s9.png")
+        Me.ImageList1.Images.SetKeyName(47, "s10.png")
+        Me.ImageList1.Images.SetKeyName(48, "sj.png")
+        Me.ImageList1.Images.SetKeyName(49, "sq.png")
+        Me.ImageList1.Images.SetKeyName(50, "sk.png")
+        Me.ImageList1.Images.SetKeyName(51, "s1.png")
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(418, 340)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(71, 96)
+        Me.PictureBox1.TabIndex = 27
+        Me.PictureBox1.TabStop = False
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Location = New System.Drawing.Point(418, 322)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(71, 96)
+        Me.PictureBox2.TabIndex = 28
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.Location = New System.Drawing.Point(418, 305)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(71, 96)
+        Me.PictureBox3.TabIndex = 29
+        Me.PictureBox3.TabStop = False
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.Location = New System.Drawing.Point(418, 289)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(71, 96)
+        Me.PictureBox4.TabIndex = 30
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.Location = New System.Drawing.Point(418, 274)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(71, 96)
+        Me.PictureBox5.TabIndex = 31
+        Me.PictureBox5.TabStop = False
+        '
+        'PictureBox6
+        '
+        Me.PictureBox6.Location = New System.Drawing.Point(418, 258)
+        Me.PictureBox6.Name = "PictureBox6"
+        Me.PictureBox6.Size = New System.Drawing.Size(71, 96)
+        Me.PictureBox6.TabIndex = 32
+        Me.PictureBox6.TabStop = False
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.Location = New System.Drawing.Point(418, 247)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(71, 96)
+        Me.PictureBox7.TabIndex = 33
+        Me.PictureBox7.TabStop = False
+        '
         'frmCardTable
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
@@ -431,6 +560,13 @@ Partial Class frmCardTable
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(990, 590)
+        Me.Controls.Add(Me.PictureBox7)
+        Me.Controls.Add(Me.PictureBox6)
+        Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.PictureBox3)
+        Me.Controls.Add(Me.PictureBox2)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label7)
@@ -454,6 +590,13 @@ Partial Class frmCardTable
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -487,5 +630,13 @@ Partial Class frmCardTable
     Friend WithEvents btnSplit As System.Windows.Forms.Button
     Friend WithEvents btnDouble As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ImageList1 As System.Windows.Forms.ImageList
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox2 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox3 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox4 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox5 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox6 As System.Windows.Forms.PictureBox
+    Friend WithEvents PictureBox7 As System.Windows.Forms.PictureBox
 
 End Class

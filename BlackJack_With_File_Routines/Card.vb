@@ -1,5 +1,5 @@
 ﻿Public Class Card
-    Dim Suits() As String = {"Spades", "Diamonds", "Clubs", "Hearts"}
+    Dim Suits() As String = {"Clubs", "Diamonds", "Hearts", "Spades"}
     Dim Faces() As String = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"}
 
     Private mFace As String
@@ -57,5 +57,9 @@
         Return mFace & " of " & mSuit
     End Function
 
-    'Implement card jpegs as a sub here
+    Public ReadOnly Property ImageIndex() As Integer
+        Get
+            Return (13 * sValue) + fValue
+        End Get
+    End Property
 End Class

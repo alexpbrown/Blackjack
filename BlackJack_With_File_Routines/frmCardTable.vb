@@ -8,7 +8,7 @@ Public Class frmCardTable
     Private wagerAmount As Decimal            'holds wager amount for bet
     Dim myDeck As Deck
     Dim dealerHand As Hand
-    Dim playerHands As New List(Of Hand)    ' List to allow for splitting
+    Dim playerHands As List(Of Hand)    ' List to allow for splitting
 
     Dim playerScore As Integer
     Dim dealerScore As Integer
@@ -57,9 +57,12 @@ Public Class frmCardTable
         myDeck = New Deck
         myDeck.Shuffle()
 
+        playerHands = New List(Of Hand)
         playerHands.Add(New Hand)
         dealerHand = New Hand
 
+
+        Dim picboxControl() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7}
         'deals two cards to both the player and the dealer
         For i = 0 To 1
             playerHands(0).AddCard(myDeck.TakeCard)
@@ -67,6 +70,7 @@ Public Class frmCardTable
 
             'show the players cards in the text box
             rtbPlayersHand.AppendText(playerHands(0).Cards(i).ToString & vbCrLf)
+            picboxControl(i).Image = ImageList1.Images.Item(playerHands(0).Cards(i).ImageIndex)
         Next
 
         'show only the dealer's first card
@@ -107,7 +111,7 @@ Public Class frmCardTable
     End Sub
 
     Private Sub btnHitMe1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnHitMe1.Click
-        Hit(playerHands(0))
+        PlayerHit(playerHands(0))
 
         ' You can't double down or split after the first hit
         btnSplit.Enabled = False
@@ -120,6 +124,8 @@ Public Class frmCardTable
         ' The dealer hits until his score is 17 or greater
         While dealerHand.Score < 17
             dealerHand.AddCard(myDeck.TakeCard)
+            rtbDealersHand.AppendText(dealerHand.Cards(dealerHand.Length - 1).ToString & vbCrLf)
+            txtDealerScore.Text = dealerHand.Score.ToString
         End While
 
         ' Check for dealer bust
@@ -134,7 +140,7 @@ Public Class frmCardTable
 
     End Sub
 
-    Private Sub Hit(ByRef h As Hand)
+    Private Sub PlayerHit(ByRef h As Hand)
         Dim score As Integer
         h.AddCard(myDeck.TakeCard)
         score = h.Score()
@@ -189,11 +195,7 @@ Public Class frmCardTable
 
         WagerReset()
 
-        ' clear the hand(s)
-        For i As Integer = 0 To playerHands.Count - 1
-            playerHands(i).Clear()
-        Next
-        dealerHand.Clear()
+        PictureBox1.Hide()
     End Sub
 
     Private Sub AssignStats(ByRef winner As Player, ByRef loser As Player, Optional ByVal push As Boolean = False)
@@ -228,7 +230,7 @@ Public Class frmCardTable
         wagerAmount += wagerAmount
         txtWager.Text = wagerAmount.ToString
 
-        Hit(playerHands(0))
+        PlayerHit(playerHands(0))
         Outcome(playerHands(0))
     End Sub
 
