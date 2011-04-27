@@ -5,13 +5,14 @@
 'This class defines the card table.
 Public Class frmCardTable
 
+    Private picboxControl As New List(Of PictureBox)
     Private wagerAmount As Decimal            'holds wager amount for bet
-    Dim myDeck As Deck
-    Dim dealerHand As Hand
-    Dim playerHands As List(Of Hand)    ' List to allow for splitting
+    Private myDeck As Deck
+    Private dealerHand As Hand
+    Private playerHands As List(Of Hand)    ' List to allow for splitting
 
-    Dim playerScore As Integer
-    Dim dealerScore As Integer
+    Private playerScore As Integer
+    Private dealerScore As Integer
 
     Private Sub btnWager_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnWager.Click
 
@@ -54,6 +55,7 @@ Public Class frmCardTable
     End Sub
 
     Private Sub btnDealHand_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnDealHand.Click
+
         myDeck = New Deck
         myDeck.Shuffle()
 
@@ -61,8 +63,6 @@ Public Class frmCardTable
         playerHands.Add(New Hand)
         dealerHand = New Hand
 
-
-        Dim picboxControl() As PictureBox = {PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7}
         'deals two cards to both the player and the dealer
         For i = 0 To 1
             playerHands(0).AddCard(myDeck.TakeCard)
@@ -71,6 +71,8 @@ Public Class frmCardTable
             'show the players cards in the text box
             rtbPlayersHand.AppendText(playerHands(0).Cards(i).ToString & vbCrLf)
             picboxControl(i).Image = ImageList1.Images.Item(playerHands(0).Cards(i).ImageIndex)
+            picboxControl(i).Visible = True
+
         Next
 
         'show only the dealer's first card
@@ -85,6 +87,8 @@ Public Class frmCardTable
         btnHitMe1.Visible = True
         btnStay.Visible = True
         lblOr.Visible = True
+        btnDouble.Visible = True
+        btnSplit.Visible = True
 
         Blackjack_Check(playerHands(0))
     End Sub
@@ -114,13 +118,14 @@ Public Class frmCardTable
         PlayerHit(playerHands(0))
 
         ' You can't double down or split after the first hit
-        btnSplit.Enabled = False
-        btnDouble.Enabled = False
+        btnSplit.Visible = False
+        btnDouble.Visible = False
     End Sub
 
     Private Sub btnStay_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnStay.Click
         'hide buttons and such
 
+        rtbDealersHand.AppendText(dealerHand.Cards(1).ToString & vbCrLf)
         ' The dealer hits until his score is 17 or greater
         While dealerHand.Score < 17
             dealerHand.AddCard(myDeck.TakeCard)
@@ -147,7 +152,8 @@ Public Class frmCardTable
 
         txtPlayerScore.Text = score.ToString
         rtbPlayersHand.AppendText(h.Cards(h.Length - 1).ToString & vbCrLf)
-
+        picboxControl(h.Length - 1).Image = ImageList1.Images.Item(h.Cards(h.Length - 1).ImageIndex)
+        picboxControl(h.Length - 1).Visible = True
         ' if you get 21 or bust, automatically calculate outcome since no user input is required
         If h.Score >= 21 Then
             Outcome(h)
@@ -189,13 +195,17 @@ Public Class frmCardTable
         btnStay.Visible = False
         btnWager.Visible = True
         lblOr.Visible = False
+        btnSplit.Visible = False
+        btnDouble.Visible = False
 
         'makes sure the user can input wager for next hand
         txtWager.ReadOnly = False
 
         WagerReset()
 
-        PictureBox1.Hide()
+        For i As Integer = picboxControl.Count - 1 To 0 Step -1
+            picboxControl(i).Visible = False
+        Next
     End Sub
 
     Private Sub AssignStats(ByRef winner As Player, ByRef loser As Player, Optional ByVal push As Boolean = False)
@@ -239,5 +249,9 @@ Public Class frmCardTable
 
         frmBlackJack_Main.Show()
         frmBlackJack_Main.Focus()
+    End Sub
+
+    Private Sub frmCardTable_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        picboxControl.AddRange({PictureBox1, PictureBox2, PictureBox3, PictureBox4, PictureBox5, PictureBox6, PictureBox7})
     End Sub
 End Class

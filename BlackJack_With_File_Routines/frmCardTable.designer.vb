@@ -498,59 +498,66 @@ Partial Class frmCardTable
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(418, 340)
+        Me.PictureBox1.Location = New System.Drawing.Point(515, 392)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox1.TabIndex = 27
         Me.PictureBox1.TabStop = False
+        Me.PictureBox1.Visible = False
         '
         'PictureBox2
         '
-        Me.PictureBox2.Location = New System.Drawing.Point(418, 322)
+        Me.PictureBox2.Location = New System.Drawing.Point(515, 364)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox2.TabIndex = 28
         Me.PictureBox2.TabStop = False
+        Me.PictureBox2.Visible = False
         '
         'PictureBox3
         '
-        Me.PictureBox3.Location = New System.Drawing.Point(418, 305)
+        Me.PictureBox3.Location = New System.Drawing.Point(515, 334)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox3.TabIndex = 29
         Me.PictureBox3.TabStop = False
+        Me.PictureBox3.Visible = False
         '
         'PictureBox4
         '
-        Me.PictureBox4.Location = New System.Drawing.Point(418, 289)
+        Me.PictureBox4.Location = New System.Drawing.Point(515, 303)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox4.TabIndex = 30
         Me.PictureBox4.TabStop = False
+        Me.PictureBox4.Visible = False
         '
         'PictureBox5
         '
-        Me.PictureBox5.Location = New System.Drawing.Point(418, 274)
+        Me.PictureBox5.Location = New System.Drawing.Point(515, 273)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox5.TabIndex = 31
         Me.PictureBox5.TabStop = False
+        Me.PictureBox5.Visible = False
         '
         'PictureBox6
         '
-        Me.PictureBox6.Location = New System.Drawing.Point(418, 258)
+        Me.PictureBox6.Location = New System.Drawing.Point(515, 238)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox6.TabIndex = 32
         Me.PictureBox6.TabStop = False
+        Me.PictureBox6.Visible = False
         '
         'PictureBox7
         '
-        Me.PictureBox7.Location = New System.Drawing.Point(418, 247)
+        Me.PictureBox7.Location = New System.Drawing.Point(515, 203)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox7.TabIndex = 33
         Me.PictureBox7.TabStop = False
+        Me.PictureBox7.Visible = False
         '
         'frmCardTable
         '
