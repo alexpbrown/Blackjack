@@ -634,7 +634,7 @@ Partial Class frmCardTable
         '
         'PictureBox15
         '
-        Me.PictureBox15.Location = New System.Drawing.Point(617, 303)
+        Me.PictureBox15.Location = New System.Drawing.Point(616, 303)
         Me.PictureBox15.Name = "PictureBox15"
         Me.PictureBox15.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox15.TabIndex = 43
@@ -643,7 +643,7 @@ Partial Class frmCardTable
         '
         'PictureBox16
         '
-        Me.PictureBox16.Location = New System.Drawing.Point(617, 273)
+        Me.PictureBox16.Location = New System.Drawing.Point(616, 273)
         Me.PictureBox16.Name = "PictureBox16"
         Me.PictureBox16.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox16.TabIndex = 44
@@ -652,7 +652,7 @@ Partial Class frmCardTable
         '
         'PictureBox17
         '
-        Me.PictureBox17.Location = New System.Drawing.Point(617, 238)
+        Me.PictureBox17.Location = New System.Drawing.Point(616, 238)
         Me.PictureBox17.Name = "PictureBox17"
         Me.PictureBox17.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox17.TabIndex = 45
@@ -679,7 +679,7 @@ Partial Class frmCardTable
         '
         'PictureBox20
         '
-        Me.PictureBox20.Location = New System.Drawing.Point(617, 146)
+        Me.PictureBox20.Location = New System.Drawing.Point(616, 146)
         Me.PictureBox20.Name = "PictureBox20"
         Me.PictureBox20.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox20.TabIndex = 48
@@ -697,7 +697,7 @@ Partial Class frmCardTable
         '
         'PictureBox22
         '
-        Me.PictureBox22.Location = New System.Drawing.Point(617, 89)
+        Me.PictureBox22.Location = New System.Drawing.Point(616, 89)
         Me.PictureBox22.Name = "PictureBox22"
         Me.PictureBox22.Size = New System.Drawing.Size(71, 96)
         Me.PictureBox22.TabIndex = 50
@@ -738,26 +738,26 @@ Partial Class frmCardTable
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(990, 590)
-        Me.Controls.Add(Me.lblPlayerScore2)
-        Me.Controls.Add(Me.txtPlayerScore2)
         Me.Controls.Add(Me.PictureBox22)
-        Me.Controls.Add(Me.lblPlayerScore1)
         Me.Controls.Add(Me.PictureBox21)
         Me.Controls.Add(Me.PictureBox20)
         Me.Controls.Add(Me.PictureBox19)
         Me.Controls.Add(Me.PictureBox18)
         Me.Controls.Add(Me.PictureBox17)
-        Me.Controls.Add(Me.txtPlayerScore1)
         Me.Controls.Add(Me.PictureBox16)
         Me.Controls.Add(Me.PictureBox15)
+        Me.Controls.Add(Me.PictureBox14)
+        Me.Controls.Add(Me.PictureBox13)
+        Me.Controls.Add(Me.lblPlayerScore2)
+        Me.Controls.Add(Me.txtPlayerScore2)
+        Me.Controls.Add(Me.lblPlayerScore1)
+        Me.Controls.Add(Me.txtPlayerScore1)
         Me.Controls.Add(Me.Label12)
         Me.Controls.Add(Me.btnDealHand)
         Me.Controls.Add(Me.btnDouble)
         Me.Controls.Add(Me.btnWager)
         Me.Controls.Add(Me.btnSplit)
         Me.Controls.Add(Me.txtWager)
-        Me.Controls.Add(Me.PictureBox14)
-        Me.Controls.Add(Me.PictureBox13)
         Me.Controls.Add(Me.PictureBox11)
         Me.Controls.Add(Me.PictureBox10)
         Me.Controls.Add(Me.PictureBox9)
