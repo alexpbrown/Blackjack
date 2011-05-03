@@ -11,6 +11,7 @@
     'constructor
     Public Sub New()
         mHand = New List(Of Card)
+        fin = False
     End Sub
 
     Public Sub AddCard(ByVal c As Card)
